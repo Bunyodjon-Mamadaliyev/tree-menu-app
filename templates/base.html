@@ -1,0 +1,23 @@
+{% load menu_tags %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сайт</title>
+    <style>
+        .active {
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Страница сайта</h1> <!-- отображается всегда -->
+
+    <!-- Главное меню -->
+    {% draw_menu 'main_menu' %}
+
+    <!-- Контент страницы -->
+    {% block content %}{% endblock %}
+</body>
+</html>
